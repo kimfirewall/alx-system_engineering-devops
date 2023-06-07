@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | sed 's/\./\./g;s/\/$//g;s/\.\./,../g;sort -n;s/$/,/g'
+ls -apvm
