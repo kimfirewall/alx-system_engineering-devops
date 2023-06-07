@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -a1v --format=single-column | awk 'BEGIN{ORS=", "} {if($0 ~ /^\.$/) dot=$0; else if($0 ~ /^\.\.$/) dotdot=$0; else if($0 ~ /\/$/) printf "%s", $0; else printf "%s", $0} END{if(dot) printf "%s, ", dot; if(dotdot) printf "%s", dotdot; printf "\n"}'
