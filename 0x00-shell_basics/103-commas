@@ -1,2 +1,3 @@
 #!/bin/bash
-(ls -A1v)
+(ls -A1v | paste -sd "," -)
+
